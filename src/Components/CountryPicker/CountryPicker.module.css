@@ -1,0 +1,13 @@
+.formControl {
+  align-items: center;
+  width: 100%;
+}
+
+.image {
+  margin: 50px 0px;
+  width: 70%;
+}
+
+.typography {
+  font-weight: bold !important;
+}

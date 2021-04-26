@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container } from "@material-ui/core";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Dashboard, About, Navbar, Provinsi, Footer } from "./Components";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Container maxWidth="lg">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/Provinsi" exact component={Provinsi} />
+          <Route path="/about" exact component={About} />
+        </Switch>
+        <Footer />
+      </Container>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
